@@ -1,0 +1,462 @@
+[
+  {
+    "slug": "form-oversized-tee",
+    "name": "Form Oversized Tee",
+    "subtitle": "Dropped shoulder, boxy body",
+    "pricePaise": 249000,
+    "compareAtPricePaise": null,
+    "fit": "OVERSIZED",
+    "fitLabel": "Oversized fit",
+    "isNew": true,
+    "rank": 1,
+    "publishedOn": "2026-10-01",
+    "description": "Our signature oversized silhouette. A wide, squared body with a dropped shoulder and a sleeve that settles just above the elbow — cut to hang with intent rather than simply run large.",
+    "details": [
+      "Dense cotton jersey with a soft, dry hand",
+      "Ribbed crew neck that holds its shape",
+      "Dropped shoulder seam and elbow-length sleeve",
+      "Straight, slightly cropped hem"
+    ],
+    "fitNotes": [
+      "Oversized through the body and shoulder",
+      "Take your usual size for the intended fit",
+      "Size down for a closer, boxy look"
+    ],
+    "care": [
+      "Machine wash cold, inside out",
+      "Dry flat in the shade",
+      "Cool iron on reverse"
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "colorways": [
+      {
+        "code": "noir",
+        "name": "Noir",
+        "hex": "#26231F",
+        "soldOut": [
+          "XS"
+        ],
+        "images": [
+          {
+            "src": "/images/products/form-noir-1.webp",
+            "alt": "Model wearing the Form Oversized Tee in Noir, front view"
+          },
+          {
+            "src": "/images/products/form-noir-2.webp",
+            "alt": "Model wearing the Form Oversized Tee in Noir, relaxed stance"
+          },
+          {
+            "src": "/images/products/form-noir-3.webp",
+            "alt": "Form Oversized Tee in Noir, shoulder and sleeve drape"
+          },
+          {
+            "src": "/images/products/form-noir-4.webp",
+            "alt": "Form Oversized Tee in Noir, full silhouette"
+          }
+        ]
+      },
+      {
+        "code": "rose",
+        "name": "Dusty Rose",
+        "hex": "#C98587",
+        "soldOut": [],
+        "images": [
+          {
+            "src": "/images/products/form-rose-1.webp",
+            "alt": "Model wearing the Form Oversized Tee in Dusty Rose"
+          },
+          {
+            "src": "/images/products/form-rose-2.webp",
+            "alt": "Form Oversized Tee in Dusty Rose, styled with denim"
+          },
+          {
+            "src": "/images/products/form-rose-3.webp",
+            "alt": "Form Oversized Tee in Dusty Rose on a hanger"
+          },
+          {
+            "src": "/images/products/form-rose-4.webp",
+            "alt": "Form Oversized Tee in Dusty Rose, neckline detail"
+          }
+        ]
+      },
+      {
+        "code": "chalk",
+        "name": "Chalk",
+        "hex": "#F2F0EA",
+        "soldOut": [
+          "XXL"
+        ],
+        "images": [
+          {
+            "src": "/images/products/form-chalk-1.webp",
+            "alt": "Model wearing the Form Oversized Tee in Chalk"
+          },
+          {
+            "src": "/images/products/form-chalk-2.webp",
+            "alt": "Form Oversized Tee in Chalk, side view"
+          },
+          {
+            "src": "/images/products/form-chalk-3.webp",
+            "alt": "Form Oversized Tee in Chalk, three-quarter view"
+          },
+          {
+            "src": "/images/products/form-chalk-4.webp",
+            "alt": "Form Oversized Tee in Chalk, sleeve detail"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "daily-regular-tee",
+    "name": "Daily Regular Tee",
+    "subtitle": "A true everyday crew",
+    "pricePaise": 169000,
+    "compareAtPricePaise": 199000,
+    "fit": "REGULAR",
+    "fitLabel": "Regular fit",
+    "isNew": false,
+    "rank": 2,
+    "publishedOn": "2026-06-12",
+    "description": "The tee you reach for first. A clean regular fit with a set-in shoulder and a slightly longer body, designed to sit neatly under a jacket or stand on its own.",
+    "details": [
+      "Mid-weight cotton jersey",
+      "Narrow ribbed crew neck",
+      "Set-in shoulder for a tailored line",
+      "Straight hem with side seams"
+    ],
+    "fitNotes": [
+      "True to size with a little ease",
+      "Model is 185 cm and wears size M"
+    ],
+    "care": [
+      "Machine wash cold with similar colours",
+      "Do not tumble dry",
+      "Warm iron if needed"
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "colorways": [
+      {
+        "code": "white",
+        "name": "Optic White",
+        "hex": "#FAFAF7",
+        "soldOut": [],
+        "images": [
+          {
+            "src": "/images/products/daily-white-1.webp",
+            "alt": "Model wearing the Daily Regular Tee in Optic White, front view"
+          },
+          {
+            "src": "/images/products/daily-white-2.webp",
+            "alt": "Daily Regular Tee in Optic White, back view"
+          },
+          {
+            "src": "/images/products/daily-white-3.webp",
+            "alt": "Daily Regular Tee in Optic White on a hanger"
+          },
+          {
+            "src": "/images/products/daily-white-4.webp",
+            "alt": "Close-up of the shoulder seam on the Daily Regular Tee"
+          }
+        ]
+      },
+      {
+        "code": "heather",
+        "name": "Heather Grey",
+        "hex": "#A8A49C",
+        "soldOut": [
+          "XS",
+          "XXL"
+        ],
+        "images": [
+          {
+            "src": "/images/products/daily-heather-1.webp",
+            "alt": "Model wearing the Daily Regular Tee in Heather Grey"
+          },
+          {
+            "src": "/images/products/daily-heather-2.webp",
+            "alt": "Daily Regular Tee in Heather Grey, back view"
+          }
+        ]
+      },
+      {
+        "code": "noir",
+        "name": "Noir",
+        "hex": "#26231F",
+        "soldOut": [],
+        "images": [
+          {
+            "src": "/images/products/daily-noir-1.webp",
+            "alt": "Daily Regular Tee in Noir on a hanger"
+          },
+          {
+            "src": "/images/products/daily-noir-2.webp",
+            "alt": "Daily Regular Tee in Noir, back view"
+          },
+          {
+            "src": "/images/products/daily-noir-3.webp",
+            "alt": "Model wearing the Daily Regular Tee in Noir against a concrete wall"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "relaxed-pocket-tee",
+    "name": "Relaxed Pocket Tee",
+    "subtitle": "Easy cut with a patch pocket",
+    "pricePaise": 219000,
+    "compareAtPricePaise": null,
+    "fit": "REGULAR",
+    "fitLabel": "Relaxed regular fit",
+    "isNew": true,
+    "rank": 3,
+    "publishedOn": "2026-09-20",
+    "description": "A relaxed take on the regular fit, finished with a single chest pocket. Warm sand tones and an easy line make it the most quietly versatile piece in the collection.",
+    "details": [
+      "Soft cotton jersey",
+      "Single patch pocket at the chest",
+      "Slightly relaxed body and sleeve",
+      "Clean double-needle hem"
+    ],
+    "fitNotes": [
+      "Relaxed, but not oversized",
+      "Take your usual size"
+    ],
+    "care": [
+      "Machine wash cold",
+      "Reshape while damp and dry flat"
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "colorways": [
+      {
+        "code": "sand",
+        "name": "Sand",
+        "hex": "#C9B49A",
+        "soldOut": [
+          "XXL"
+        ],
+        "images": [
+          {
+            "src": "/images/products/pocket-sand-1.webp",
+            "alt": "Model wearing the Relaxed Pocket Tee in Sand, leaning in a doorway"
+          },
+          {
+            "src": "/images/products/pocket-sand-2.webp",
+            "alt": "Relaxed Pocket Tee in Sand, in motion"
+          },
+          {
+            "src": "/images/products/pocket-sand-3.webp",
+            "alt": "Relaxed Pocket Tee in Sand, front view"
+          },
+          {
+            "src": "/images/products/pocket-sand-4.webp",
+            "alt": "Relaxed Pocket Tee in Sand, seated"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "heavyweight-boxy-tee",
+    "name": "Heavyweight Boxy Tee",
+    "subtitle": "Structured, squared silhouette",
+    "pricePaise": 269000,
+    "compareAtPricePaise": null,
+    "fit": "REGULAR",
+    "fitLabel": "Boxy regular fit",
+    "isNew": true,
+    "rank": 4,
+    "publishedOn": "2026-10-08",
+    "description": "Our most structured tee. A heavier jersey gives the boxy body its architectural shape — squared at the shoulder, straight through the side, and cropped to sit at the hip.",
+    "details": [
+      "Heavyweight cotton jersey with body",
+      "Wide ribbed neckband",
+      "Squared shoulder and straight side",
+      "Cropped hip-length hem"
+    ],
+    "fitNotes": [
+      "Boxy and slightly cropped",
+      "Take your usual size"
+    ],
+    "care": [
+      "Machine wash cold, inside out",
+      "Dry flat",
+      "Do not bleach"
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "colorways": [
+      {
+        "code": "stone",
+        "name": "Stone",
+        "hex": "#D9D6C8",
+        "soldOut": [],
+        "images": [
+          {
+            "src": "/images/products/boxy-stone-1.webp",
+            "alt": "Model wearing the Heavyweight Boxy Tee in Stone, in warm sunlight"
+          },
+          {
+            "src": "/images/products/boxy-stone-2.webp",
+            "alt": "Heavyweight Boxy Tee in Stone, laid flat"
+          },
+          {
+            "src": "/images/products/boxy-stone-3.webp",
+            "alt": "Heavyweight Boxy Tee in Stone, fabric in afternoon light"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "weekend-relaxed-tee",
+    "name": "Weekend Relaxed Tee",
+    "subtitle": "Softly draped crew",
+    "pricePaise": 189000,
+    "compareAtPricePaise": 229000,
+    "fit": "REGULAR",
+    "fitLabel": "Relaxed regular fit",
+    "isNew": false,
+    "rank": 5,
+    "publishedOn": "2026-07-04",
+    "description": "A lighter, softly draped crew with a gentle shoulder and a relaxed sleeve. Simple enough for everything, considered enough to wear on its own.",
+    "details": [
+      "Light cotton jersey",
+      "Fine ribbed neck",
+      "Relaxed sleeve with a clean hem",
+      "Gently curved hem"
+    ],
+    "fitNotes": [
+      "Relaxed through the body",
+      "True to size"
+    ],
+    "care": [
+      "Machine wash cold",
+      "Line dry in the shade"
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "colorways": [
+      {
+        "code": "white",
+        "name": "Soft White",
+        "hex": "#F4F2EC",
+        "soldOut": [],
+        "images": [
+          {
+            "src": "/images/products/weekend-white-1.webp",
+            "alt": "Model wearing the Weekend Relaxed Tee in Soft White"
+          },
+          {
+            "src": "/images/products/weekend-white-2.webp",
+            "alt": "Weekend Relaxed Tee in Soft White, back view"
+          },
+          {
+            "src": "/images/products/weekend-white-4.webp",
+            "alt": "Weekend Relaxed Tee in Soft White, styled with trousers"
+          },
+          {
+            "src": "/images/products/weekend-white-3.webp",
+            "alt": "Weekend Relaxed Tee in Soft White, styled with denim"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "field-oversized-tee",
+    "name": "Field Oversized Tee",
+    "subtitle": "Generous cut, clean finish",
+    "pricePaise": 239000,
+    "compareAtPricePaise": 279000,
+    "fit": "OVERSIZED",
+    "fitLabel": "Oversized fit",
+    "isNew": false,
+    "rank": 6,
+    "publishedOn": "2026-05-18",
+    "description": "A generous, easy oversized tee in a warm bone tone. The longer body and full sleeve give it a relaxed, lived-in movement from the first wear.",
+    "details": [
+      "Cotton jersey with a soft finish",
+      "Wide crew neck",
+      "Full sleeve and longer body",
+      "Straight hem"
+    ],
+    "fitNotes": [
+      "Generously oversized",
+      "Size down one for a closer fit"
+    ],
+    "care": [
+      "Machine wash cold",
+      "Dry flat"
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "colorways": [
+      {
+        "code": "bone",
+        "name": "Bone",
+        "hex": "#EEEAE0",
+        "soldOut": [
+          "XS",
+          "S"
+        ],
+        "images": [
+          {
+            "src": "/images/products/field-bone-1.webp",
+            "alt": "Model wearing the Field Oversized Tee in Bone"
+          },
+          {
+            "src": "/images/products/field-bone-2.webp",
+            "alt": "Field Oversized Tee in Bone, worn outdoors with a skateboard"
+          },
+          {
+            "src": "/images/products/field-bone-3.webp",
+            "alt": "Field Oversized Tee in Bone, front view with cap"
+          },
+          {
+            "src": "/images/products/field-bone-4.webp",
+            "alt": "Field Oversized Tee in Bone, neckline detail"
+          }
+        ]
+      }
+    ]
+  }
+]

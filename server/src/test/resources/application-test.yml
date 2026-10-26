@@ -1,0 +1,24 @@
+# Integration tests. The real connection comes from Testcontainers (@ServiceConnection);
+# these placeholders only satisfy property binding and are never used to connect.
+spring:
+  datasource:
+    url: jdbc:postgresql://replaced-by-testcontainers/test
+    username: test
+    password: test
+
+app:
+  admin:
+    emails: admin@code76.test
+  cors:
+    allowed-origins: http://localhost:5173
+  settings:
+    encryption-key: MDEyMzQ1Njc4OWFiY2RlZjAxMjM0NTY3ODlhYmNkZWY=   # test-only key (32 bytes)
+  payments:
+    razorpay:
+      # Dummy test-mode values; tests swap in FakeRazorpayGateway, so nothing calls Razorpay.
+      key-id: rzp_test_fakekey00001
+      key-secret: fake_key_secret_for_tests
+      webhook-secret: fake_webhook_secret_for_tests
+  orders:
+    expiry-job:
+      enabled: false   # tests call OrderExpiryJob.run() directly

@@ -1,0 +1,11 @@
+node_modules
+dist
+*.local
+.DS_Store
+
+# Backend
+server/target/
+server/.env
+.env
+!.env.example
+*.tsbuildinfo

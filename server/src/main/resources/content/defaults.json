@@ -1,0 +1,777 @@
+{
+  "$comment": "The original website content. Loaded into the database on first start, used by the frontend when no server is connected, and restored by 'Reset to original' in the admin.",
+  "home.layout": {
+    "sections": [
+      {
+        "id": "hero",
+        "visible": true
+      },
+      {
+        "id": "ribbon",
+        "visible": true
+      },
+      {
+        "id": "featured",
+        "visible": true
+      },
+      {
+        "id": "offer",
+        "visible": true
+      },
+      {
+        "id": "shopByFit",
+        "visible": true
+      },
+      {
+        "id": "marquee",
+        "visible": true
+      },
+      {
+        "id": "signature",
+        "visible": true
+      },
+      {
+        "id": "lookbook",
+        "visible": true
+      },
+      {
+        "id": "brandIntro",
+        "visible": true
+      },
+      {
+        "id": "brandDetails",
+        "visible": true
+      },
+      {
+        "id": "testimonials",
+        "visible": true
+      },
+      {
+        "id": "newsletter",
+        "visible": true
+      }
+    ]
+  },
+  "home.hero": {
+    "slides": [
+      {
+        "image": "/images/editorial/hero.webp",
+        "fit": "auto",
+        "mobileImage": "/images/editorial/hero-mobile.webp",
+        "alt": "Model in a stone-coloured T-shirt against a sunlit ivory wall with soft leaf shadows",
+        "eyebrowLeft": "AW26",
+        "eyebrowRight": "Collection 01",
+        "line1": "Everyday,",
+        "line2": "Redefined.",
+        "copy": "Considered essentials. A different perspective.",
+        "ctaLabel": "Explore the collection",
+        "ctaLink": "/shop",
+        "pill": "Explore the drop",
+        "secondaryLabel": "Discover our approach",
+        "secondaryLink": "/about",
+        "tone": "ink",
+        "align": "left",
+        "vAlign": "bottom",
+        "scrim": false,
+        "position": "62% 40%",
+        "mobilePosition": "60% 30%"
+      },
+      {
+        "image": "/images/editorial/slide-oversized.webp",
+        "fit": "auto",
+        "mobileImage": "/images/editorial/slide-oversized-mobile.webp",
+        "alt": "Model in a white oversized tee holding a skateboard beside a dark timber building",
+        "eyebrowLeft": "Fit A",
+        "eyebrowRight": "Oversized",
+        "line1": "Oversized,",
+        "line2": "on purpose.",
+        "copy": "Dropped shoulders, a wider body and a sleeve that settles at the elbow.",
+        "ctaLabel": "Shop oversized",
+        "ctaLink": "/collections/oversized",
+        "pill": "Go oversized",
+        "secondaryLabel": "",
+        "secondaryLink": "",
+        "tone": "paper",
+        "align": "left",
+        "vAlign": "top",
+        "scrim": false,
+        "position": "50% 45%",
+        "mobilePosition": "50% 0%"
+      },
+      {
+        "image": "/images/editorial/slide-colonnade.webp",
+        "fit": "auto",
+        "mobileImage": "/images/editorial/slide-colonnade-mobile.webp",
+        "alt": "Model in a white tee leaning on a concrete column in a shaded colonnade",
+        "eyebrowLeft": "Roll 01",
+        "eyebrowRight": "The new drop",
+        "line1": "The new",
+        "line2": "drop.",
+        "copy": "New weights and tones for the season — in both fits, ready now.",
+        "ctaLabel": "Shop new arrivals",
+        "ctaLink": "/collections/new-arrivals",
+        "pill": "Shop Roll 01",
+        "secondaryLabel": "",
+        "secondaryLink": "",
+        "tone": "paper",
+        "align": "left",
+        "vAlign": "bottom",
+        "scrim": true,
+        "position": "50% 35%",
+        "mobilePosition": "50% 30%"
+      },
+      {
+        "image": "/images/editorial/slide-back.webp",
+        "fit": "auto",
+        "mobileImage": "/images/editorial/slide-back-mobile.webp",
+        "alt": "Model in a heather grey regular-fit tee seen from behind against a plaster wall",
+        "eyebrowLeft": "Fit B",
+        "eyebrowRight": "Regular",
+        "line1": "Clean",
+        "line2": "lines.",
+        "copy": "A set-in shoulder and just enough ease — the everyday tee, refined.",
+        "ctaLabel": "Shop regular fit",
+        "ctaLink": "/collections/regular-fit",
+        "pill": "Find your fit",
+        "secondaryLabel": "",
+        "secondaryLink": "",
+        "tone": "ink",
+        "align": "right",
+        "vAlign": "bottom",
+        "scrim": false,
+        "position": "45% 40%",
+        "mobilePosition": "50% 0%"
+      }
+    ]
+  },
+  "home.ribbon": {
+    "items": [
+      "Free shipping on orders over {freeShipping}",
+      "Power-Up Deal is live: shop the offers",
+      "Drop-shoulder tees & oversized hoodies",
+      "Every design in black and white"
+    ],
+    "link": "/offers"
+  },
+  "home.featured": {
+    "eyebrow": "Roll 01 — The new drop",
+    "line1": "New this",
+    "line2": "season",
+    "copy": "Oversized and regular fits in a palette that works together. Swipe through the drop, or quick-add your size.",
+    "linkLabel": "Shop all T-shirts",
+    "linkTo": "/shop",
+    "count": 12
+  },
+  "home.shopByFit": {
+    "eyebrow": "Shop by fit",
+    "line1": "Two silhouettes.",
+    "line2": "Your choice.",
+    "intro": "Every tee in the collection is built on one of two carefully developed patterns. Choose the line that suits the way you dress.",
+    "cards": [
+      {
+        "badge": "Fit A",
+        "title": "Oversized",
+        "copy": "A dropped shoulder, a wider body and a sleeve that settles at the elbow. Relaxed by design, sharp by intent.",
+        "ctaLabel": "Shop oversized",
+        "link": "/collections/oversized",
+        "image": "/images/editorial/fit-oversized.webp",
+        "alt": "Model in a white oversized tee holding a skateboard beside a timber-clad building"
+      },
+      {
+        "badge": "Fit B",
+        "title": "Regular fit",
+        "copy": "Clean, close lines with a set-in shoulder and just enough ease. The everyday tee, refined to the essentials.",
+        "ctaLabel": "Shop regular fit",
+        "link": "/collections/regular-fit",
+        "image": "/images/editorial/fit-regular.webp",
+        "alt": "Model in a white regular-fit tee standing in a sunlit room with tall windows"
+      }
+    ]
+  },
+  "home.marquee": {
+    "words": [
+      "Considered essentials",
+      "Oversized",
+      "Regular fit",
+      "New season",
+      "Less, but better",
+      "Everyday, redefined"
+    ]
+  },
+  "home.signature": {
+    "eyebrow": "The signature piece",
+    "line1": "The Daily",
+    "line2": "Tee",
+    "productSlug": "daily-regular-tee",
+    "chapters": [
+      {
+        "label": "Front",
+        "title": "A clean, set-in shoulder.",
+        "body": "The shoulder seam sits exactly where it should, giving the Daily Tee a tidy, tailored line that looks considered under a jacket or on its own.",
+        "image": "/images/products/daily-white-1.webp",
+        "alt": "Front view of the Daily Regular Tee in Optic White"
+      },
+      {
+        "label": "Back",
+        "title": "Balanced from every side.",
+        "body": "A slightly longer back and a straight hem keep the silhouette neat when you move — the kind of proportion you notice once you’ve worn it.",
+        "image": "/images/products/daily-white-2.webp",
+        "alt": "Back view of the Daily Regular Tee in Optic White"
+      },
+      {
+        "label": "Detail",
+        "title": "Finished with care.",
+        "body": "A narrow ribbed neck, a clean shoulder seam and an even hem. Small decisions, made deliberately, for a tee that keeps its shape.",
+        "image": "/images/products/daily-white-4.webp",
+        "alt": "Close-up of the shoulder seam on the Daily Regular Tee"
+      }
+    ],
+    "ctaLabel": "Discover the piece"
+  },
+  "home.lookbook": {
+    "eyebrow": "Lookbook — AW26",
+    "line1": "City",
+    "line2": "light",
+    "intro": "Shot across plaster walls, concrete colonnades and late-afternoon interiors — six frames on how the collection lives day to day.",
+    "frames": [
+      {
+        "image": "/images/editorial/look-concrete.webp",
+        "alt": "Model in a black tee standing before a weathered concrete wall in warm light",
+        "caption": "Noir, against the grain of the city.",
+        "size": "tall",
+        "offset": "bottom",
+        "productSlug": "daily-regular-tee"
+      },
+      {
+        "image": "/images/editorial/look-colonnade.webp",
+        "alt": "Model in a white tee leaning on a concrete column in a shaded colonnade",
+        "caption": "Shade and structure. The Daily Tee in Optic White.",
+        "size": "wide",
+        "offset": "top",
+        "productSlug": "daily-regular-tee"
+      },
+      {
+        "image": "/images/editorial/look-light.webp",
+        "alt": "A cream tee laid on a wooden floor in a bar of afternoon sunlight",
+        "caption": "Four o’clock light.",
+        "size": "small",
+        "offset": "middle",
+        "productSlug": "heavyweight-boxy-tee"
+      },
+      {
+        "image": "/images/editorial/look-arch.webp",
+        "alt": "A woman holding a white tee on a hanger beneath a pale arch",
+        "caption": "Considered, down to the hanger.",
+        "size": "tall",
+        "offset": "top",
+        "productSlug": "weekend-relaxed-tee"
+      },
+      {
+        "image": "/images/editorial/look-back.webp",
+        "alt": "Model in a heather grey tee seen from behind against a plaster wall",
+        "caption": "The back view matters too.",
+        "size": "wide",
+        "offset": "bottom",
+        "productSlug": "daily-regular-tee"
+      },
+      {
+        "image": "/images/editorial/look-wall.webp",
+        "alt": "Model in a fitted white tee and dark trousers mid-stride beside a sunlit wall",
+        "caption": "Walk it in.",
+        "size": "tall",
+        "offset": "middle",
+        "productSlug": "weekend-relaxed-tee"
+      }
+    ],
+    "outroLine1": "Every frame,",
+    "outroLine2": "available now.",
+    "ctaLabel": "Shop the lookbook",
+    "ctaLink": "/shop"
+  },
+  "home.brandIntro": {
+    "eyebrow": "Our approach",
+    "line1": "Less,",
+    "line2": "but better.",
+    "statement": "We design a small number of T-shirts and refine them until they feel inevitable. Versatile silhouettes, balanced proportions and a quiet palette — made to be reached for, worn often, and lived in.",
+    "image": "/images/products/daily-white-3.webp",
+    "alt": "A white tee hanging on a minimal rail in soft daylight",
+    "caption": "Fig. 01 — The Daily Tee, Optic White",
+    "body": "Every piece starts with fit. Oversized or regular, each silhouette is shaped to sit naturally on the body and pair easily with what you already own — the foundation of an everyday wardrobe.",
+    "linkLabel": "Discover our approach",
+    "linkTo": "/about"
+  },
+  "home.brandDetails": {
+    "eyebrow": "The details",
+    "line1": "Made to be",
+    "line2": "worn often.",
+    "image1": "/images/editorial/detail-shoulder.webp",
+    "alt1": "Close-up of a tee’s shoulder seam and sleeve",
+    "image2": "/images/editorial/detail-fabric.webp",
+    "alt2": "A cream tee’s neckline and fabric in warm light",
+    "items": [
+      {
+        "title": "Thoughtful fits",
+        "body": "Two silhouettes, each refined over many samples — so the shoulder sits right and the hem falls where it should."
+      },
+      {
+        "title": "Versatile styling",
+        "body": "A restrained palette designed to work together. Layer it, tuck it, or wear it exactly as it is."
+      },
+      {
+        "title": "Considered details",
+        "body": "Neat ribbed necklines, balanced proportions and clean finishing — the small decisions you notice over time."
+      },
+      {
+        "title": "Everyday comfort",
+        "body": "Soft jersey and easy shapes made for long days, slow weekends and everything in between."
+      }
+    ]
+  },
+  "home.testimonials": {
+    "eyebrow": "Impressions",
+    "line1": "In their",
+    "line2": "words",
+    "showSampleNote": true,
+    "sampleNote": "Sample content — for design preview only",
+    "items": [
+      {
+        "quote": "The oversized fit drapes exactly the way I hoped — relaxed, but still sharp enough to wear out.",
+        "name": "Sample reviewer A",
+        "detail": "Form Oversized Tee · Noir"
+      },
+      {
+        "quote": "Clean neckline, good weight, and it sits well under a jacket. The kind of tee you end up buying twice.",
+        "name": "Sample reviewer B",
+        "detail": "Daily Regular Tee · Optic White"
+      },
+      {
+        "quote": "The sand colour is warm without being loud. It goes with everything I already own.",
+        "name": "Sample reviewer C",
+        "detail": "Relaxed Pocket Tee · Sand"
+      }
+    ]
+  },
+  "home.offer": {
+    "eyebrow": "Power-Up Deal",
+    "badge": "Limited arc",
+    "line1": "Level up your fit,",
+    "line2": "ship it free.",
+    "body": "Every order over {freeShipping} ships free across India. Stack your favourite designs past the line and the delivery is on us.",
+    "bigText": "FREE",
+    "bigNote": "shipping over {freeShipping}",
+    "perks": [
+      "Free delivery across India",
+      "Drop-shoulder fit, in black or white",
+      "Big back prints, made to be worn on repeat"
+    ],
+    "ctaLabel": "Grab the deal",
+    "ctaLink": "/offers",
+    "endsOn": "",
+    "image": "",
+    "alt": ""
+  },
+  "home.newsletter": {
+    "eyebrow": "Newsletter",
+    "line1": "Let’s keep",
+    "line2": "in touch.",
+    "body": "New collections, restocks and the occasional note from the studio. A few emails a season — nothing more.",
+    "image": "/images/editorial/look-light.webp",
+    "alt": "A cream tee resting on a wooden floor in a bar of afternoon sunlight"
+  },
+  "site.announcements": {
+    "items": [
+      "Roll 01 is live — shop the new drop",
+      "Complimentary shipping on orders over ₹2,999",
+      "Two fits: oversized & regular"
+    ],
+    "link": "/collections/new-arrivals"
+  },
+  "site.header": {
+    "nav": [
+      {
+        "label": "Home",
+        "link": "/",
+        "showPanel": false
+      },
+      {
+        "label": "Shop",
+        "link": "/shop",
+        "showPanel": false
+      },
+      {
+        "label": "New Arrivals",
+        "link": "/collections/new-arrivals",
+        "showPanel": false
+      },
+      {
+        "label": "Power-Ups",
+        "link": "/#power-up-deal",
+        "showPanel": false
+      },
+      {
+        "label": "Collections",
+        "link": "/collections/oversized",
+        "showPanel": true
+      },
+      {
+        "label": "Our Story",
+        "link": "/about",
+        "showPanel": false
+      }
+    ],
+    "panelEyebrow": "Collections",
+    "panelTitle": "Two silhouettes. One considered wardrobe.",
+    "panelLinkLabel": "View everything",
+    "panelLink": "/shop",
+    "panel": [
+      {
+        "label": "Oversized",
+        "link": "/collections/oversized",
+        "image": "/images/editorial/fit-oversized.webp",
+        "note": "Dropped shoulder, boxy drape"
+      },
+      {
+        "label": "Regular Fit",
+        "link": "/collections/regular-fit",
+        "image": "/images/editorial/fit-regular.webp",
+        "note": "Clean lines, everyday ease"
+      },
+      {
+        "label": "New Arrivals",
+        "link": "/collections/new-arrivals",
+        "image": "/images/products/boxy-stone-1.webp",
+        "note": "The AW26 edit"
+      }
+    ]
+  },
+  "site.mobileMenu": {
+    "links": [
+      {
+        "label": "Home",
+        "link": "/"
+      },
+      {
+        "label": "Shop all",
+        "link": "/shop"
+      },
+      {
+        "label": "New arrivals",
+        "link": "/collections/new-arrivals"
+      },
+      {
+        "label": "Oversized",
+        "link": "/collections/oversized"
+      },
+      {
+        "label": "Regular fit",
+        "link": "/collections/regular-fit"
+      },
+      {
+        "label": "Our story",
+        "link": "/about"
+      },
+      {
+        "label": "Power-Ups",
+        "link": "/#power-up-deal"
+      }
+    ],
+    "promoImage": "/images/products/boxy-stone-1.webp",
+    "promoEyebrow": "Autumn / Winter 2026",
+    "promoTitle": "The new season edit",
+    "promoLink": "/collections/new-arrivals"
+  },
+  "site.footer": {
+    "blurb": "Considered T-shirts in two silhouettes, designed for everyday wear. Fewer pieces, chosen well.",
+    "columns": [
+      {
+        "title": "Shop",
+        "links": [
+          {
+            "label": "Shop all",
+            "link": "/shop"
+          },
+          {
+            "label": "New arrivals",
+            "link": "/collections/new-arrivals"
+          },
+          {
+            "label": "Oversized",
+            "link": "/collections/oversized"
+          },
+          {
+            "label": "Regular fit",
+            "link": "/collections/regular-fit"
+          }
+        ]
+      },
+      {
+        "title": "Customer care",
+        "links": [
+          {
+            "label": "Contact us",
+            "link": "/about#contact"
+          },
+          {
+            "label": "Size guide",
+            "link": "/product/form-oversized-tee#size-guide"
+          },
+          {
+            "label": "Shipping",
+            "link": "/about#shipping"
+          },
+          {
+            "label": "Returns & exchanges",
+            "link": "/about#shipping"
+          }
+        ]
+      },
+      {
+        "title": "The brand",
+        "links": [
+          {
+            "label": "Our story",
+            "link": "/about"
+          },
+          {
+            "label": "Wishlist",
+            "link": "/account"
+          },
+          {
+            "label": "Your bag",
+            "link": "/cart"
+          }
+        ]
+      }
+    ],
+    "socials": [
+      {
+        "label": "Instagram",
+        "link": ""
+      },
+      {
+        "label": "Pinterest",
+        "link": ""
+      },
+      {
+        "label": "YouTube",
+        "link": ""
+      }
+    ],
+    "copyright": "© {year} {store}. All rights reserved.",
+    "legal": [
+      {
+        "label": "Privacy policy",
+        "link": "/about#privacy"
+      },
+      {
+        "label": "Terms of service",
+        "link": "/about#terms"
+      },
+      {
+        "label": "Shipping & returns",
+        "link": "/about#shipping"
+      }
+    ]
+  },
+  "site.search": {
+    "suggestions": [
+      "Oversized",
+      "Noir",
+      "White",
+      "Sand",
+      "Pocket",
+      "Boxy"
+    ]
+  },
+  "page.shopAll": {
+    "eyebrow": "The collection",
+    "title": "Shop All",
+    "line1": "Shop",
+    "line2": "all tees",
+    "intro": "Every piece in the current collection — oversized and regular fits in a considered, seasonless palette."
+  },
+  "page.offers": {
+    "eyebrow": "Power-Up Deal",
+    "line1": "Power-Ups",
+    "line2": "on now.",
+    "intro": "Every deal in one place. Plus, every order over {freeShipping} ships free across India.",
+    "emptyTitle": "New power-ups loading.",
+    "emptyBody": "There are no offers right now. Check back soon, or browse the full collection."
+  },
+  "page.about": {
+    "eyebrow": "Our story",
+    "line1": "Designed for",
+    "line2": "the everyday.",
+    "heroImage": "/images/editorial/about-arch.webp",
+    "heroImageMobile": "/images/editorial/look-arch.webp",
+    "heroAlt": "A woman holding a white tee on a hanger beneath twin plaster arches",
+    "ideaLabel": "The idea",
+    "ideaLead": "{store} began with a simple question: what if a T-shirt was designed with the same attention usually reserved for tailoring? We started with fit, kept the palette quiet, and let proportion do the talking.",
+    "ideaBody1": "The result is a small collection built on two silhouettes — oversized and regular — each refined until the shoulder sits right, the sleeve falls cleanly and the hem lands where it should.",
+    "ideaBody2": "We think the best wardrobe staples are the ones you stop thinking about: pieces that work with everything, every day, without asking for attention. That’s what we set out to make.",
+    "marquee": [
+      "Less, but better",
+      "Fit first",
+      "Quiet palette",
+      "Everyday, redefined"
+    ],
+    "sideImage": "/images/editorial/look-concrete.webp",
+    "sideAlt": "Model in a black tee against a weathered concrete wall",
+    "beliefsLine1": "What we",
+    "beliefsLine2": "believe",
+    "principles": [
+      {
+        "title": "Fewer, better pieces",
+        "body": "A tight collection of tees we can keep refining, rather than a constant stream of new things."
+      },
+      {
+        "title": "Fit before everything",
+        "body": "Two silhouettes, developed patiently. When the fit is right, everything else follows."
+      },
+      {
+        "title": "A palette that works together",
+        "body": "Quiet neutrals and a few considered tones, chosen so every piece pairs with the rest."
+      }
+    ],
+    "showDetails": true,
+    "careLine1": "Customer",
+    "careLine2": "care",
+    "careNote": "Placeholder policies — to be finalised before launch",
+    "policies": [
+      {
+        "anchor": "contact",
+        "title": "Contact",
+        "body": "Questions about an order, sizing or anything else? Write to us at {email} and we’ll get back to you."
+      },
+      {
+        "anchor": "shipping",
+        "title": "Shipping & returns",
+        "body": "We deliver across India. Shipping is complimentary above a minimum order value, shown in your bag and at checkout.\n\nReturn and exchange timelines, delivery partners and conditions will be published here before launch."
+      },
+      {
+        "anchor": "privacy",
+        "title": "Privacy policy",
+        "body": "To run the store we keep your account details, delivery addresses and order history, and — only if you sign up — your email for the newsletter, which you can ask us to remove at any time. Card and UPI payments are handled by our payment partner, Razorpay; we never see or store your card details.\n\nA full privacy policy will be published here before launch."
+      },
+      {
+        "anchor": "terms",
+        "title": "Terms of service",
+        "body": "Prices and availability are shown on each product page and confirmed at checkout. Full terms of sale will be published here before launch."
+      }
+    ],
+    "primaryLabel": "Explore the collection",
+    "primaryLink": "/shop",
+    "secondaryLabel": "New arrivals",
+    "secondaryLink": "/collections/new-arrivals"
+  },
+  "product.page": {
+    "priceNote": "Inclusive of all taxes",
+    "shippingNote": "Complimentary shipping on orders over {freeShipping}.",
+    "shippingReturns": "We deliver across India. Shipping is free above {freeShipping}. Return and exchange details will be published on our story page before launch."
+  },
+  "product.sizeGuide": {
+    "intro": "Garment measurements in centimetres, measured flat.",
+    "oversized": [
+      {
+        "size": "XXS",
+        "chest": 106,
+        "length": 66,
+        "shoulder": 52
+      },
+      {
+        "size": "XS",
+        "chest": 112,
+        "length": 68,
+        "shoulder": 54
+      },
+      {
+        "size": "S",
+        "chest": 118,
+        "length": 70,
+        "shoulder": 56
+      },
+      {
+        "size": "M",
+        "chest": 124,
+        "length": 72,
+        "shoulder": 58
+      },
+      {
+        "size": "L",
+        "chest": 130,
+        "length": 74,
+        "shoulder": 60
+      },
+      {
+        "size": "XL",
+        "chest": 136,
+        "length": 76,
+        "shoulder": 62
+      },
+      {
+        "size": "XXL",
+        "chest": 142,
+        "length": 78,
+        "shoulder": 64
+      },
+      {
+        "size": "XXXL",
+        "chest": 148,
+        "length": 80,
+        "shoulder": 66
+      }
+    ],
+    "oversizedAdvice": "Take your usual size for the intended oversized drape. Size down once for a closer, boxier look.",
+    "regular": [
+      {
+        "size": "XXS",
+        "chest": 88,
+        "length": 64,
+        "shoulder": 40
+      },
+      {
+        "size": "XS",
+        "chest": 94,
+        "length": 66,
+        "shoulder": 42
+      },
+      {
+        "size": "S",
+        "chest": 100,
+        "length": 68,
+        "shoulder": 44
+      },
+      {
+        "size": "M",
+        "chest": 106,
+        "length": 70,
+        "shoulder": 46
+      },
+      {
+        "size": "L",
+        "chest": 112,
+        "length": 72,
+        "shoulder": 48
+      },
+      {
+        "size": "XL",
+        "chest": 118,
+        "length": 74,
+        "shoulder": 50
+      },
+      {
+        "size": "XXL",
+        "chest": 124,
+        "length": 76,
+        "shoulder": 52
+      },
+      {
+        "size": "XXXL",
+        "chest": 130,
+        "length": 78,
+        "shoulder": 54
+      }
+    ],
+    "regularAdvice": "True to size with a little ease. Size up once for a more relaxed fit."
+  }
+}

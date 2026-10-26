@@ -1,0 +1,180 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --header-h: 64px;
+    --announce-h: 34px;
+    --nav-offset: var(--header-h);
+    /* Phone bottom navigation (hidden from lg up). */
+    --bottom-nav-bar: 62px;
+    --bottom-nav-h: calc(var(--bottom-nav-bar) + env(safe-area-inset-bottom));
+    /* Palette — white, navy and a signature red (after The Souled Store), tuned for a premium feel. */
+    --c-paper: 255 255 255;     /* #FFFFFF page */
+    --c-newsprint: 245 245 246; /* #F5F5F6 alternate sections */
+    --c-ink: 40 44 63;          /* #282C3F navy-charcoal text */
+    --c-graphite: 98 101 112;   /* #626570 secondary text */
+    --c-stamp: 214 40 46;       /* #D6282E signature red — labels, offers, active states */
+    --c-rule: 230 231 232;      /* #E6E7E8 hairlines */
+    --c-card: 252 237 233;      /* #FCEDE9 soft blush behind product photos */
+    --c-surface: 255 255 255;   /* #FFFFFF cards */
+    --c-solid: 40 44 63;        /* #282C3F navy — buttons, bag */
+    --c-onsolid: 255 255 255;
+    --c-band: 40 44 63;         /* #282C3F lookbook band */
+    --c-onband: 255 255 255;
+    --c-night: 14 14 16;        /* #0E0E10 matte black - top bar, offer band */
+    --c-gold: 212 175 92;       /* #D4AF5C warm gold - premium accents */
+    --c-gold-deep: 176 136 54;  /* #B08836 deeper gold for gradients */
+    --c-cream: 247 240 222;     /* #F7F0DE warm cream - phone bottom bar */
+    color-scheme: light;
+  }
+  @media (min-width: 1024px) {
+    :root { --header-h: 76px; --bottom-nav-h: 0px; }
+  }
+
+  html {
+    -webkit-text-size-adjust: 100%;
+    text-rendering: optimizeLegibility;
+  }
+  html.lenis, html.lenis body { height: auto; }
+  .lenis.lenis-smooth { scroll-behavior: auto !important; }
+  .lenis.lenis-smooth [data-lenis-prevent] { overscroll-behavior: contain; }
+  .lenis.lenis-stopped { overflow: hidden; }
+
+  body {
+    @apply bg-paper font-sans text-ink antialiased;
+    font-feature-settings: 'ss01', 'cv11';
+    overflow-x: clip;
+    padding-bottom: var(--bottom-nav-h);
+  }
+
+  /* Paper grain over the whole page, photos included — the printed-matter finish. */
+  @media (min-width: 768px) {
+    body::after {
+      content: '';
+      position: fixed;
+      inset: 0;
+      z-index: 120;
+      pointer-events: none;
+      opacity: 0.3;
+      mix-blend-mode: multiply;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.08 0 0 0 0 0.08 0 0 0 0 0.08 0 0 0 0.07 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    }
+  }
+
+  ::selection { background: rgb(var(--c-ink)); color: rgb(var(--c-paper)); }
+
+  :focus-visible {
+    outline: 1.5px solid rgb(var(--c-ink));
+    outline-offset: 3px;
+  }
+
+  img { -webkit-user-drag: none; }
+
+  input, select, textarea, button { font: inherit; color: inherit; }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.001ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.001ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+@layer components {
+  .site-container {
+    @apply mx-auto w-full max-w-site px-4 sm:px-6 lg:px-10 2xl:px-14;
+  }
+
+  /* Mono label, like a print spec line. */
+  .eyebrow {
+    @apply font-mono text-micro font-medium uppercase text-graphite;
+  }
+
+  /* Headlines: clean, bold sans in normal case — neat and easy to read. */
+  .display {
+    @apply font-display;
+    font-weight: 700;
+    line-height: 1.05;
+    letter-spacing: -0.03em;
+  }
+  /* Accent words keep the same clean face (no italics). */
+  .display .italic,
+  .display.italic {
+    font-style: normal;
+  }
+
+  /* Long editorial passages: quieter sans, tight and large. */
+  .lede {
+    @apply font-sans;
+    font-weight: 400;
+    letter-spacing: -0.025em;
+  }
+
+  /* Hollow ink type for accent words. */
+  .ink-outline {
+    color: transparent;
+    -webkit-text-stroke: 1.5px currentColor;
+  }
+
+  .link-underline {
+    @apply relative inline-block;
+  }
+  .link-underline::after {
+    content: '';
+    @apply absolute -bottom-0.5 left-0 h-px w-full origin-right scale-x-0 bg-current transition-transform duration-500 ease-editorial;
+  }
+  .link-underline:hover::after,
+  .link-underline:focus-visible::after,
+  .link-underline[aria-current='page']::after {
+    @apply origin-left scale-x-100;
+  }
+
+  .link-static-underline {
+    @apply relative inline-block pb-1;
+    background-image: linear-gradient(currentColor, currentColor);
+    background-size: 100% 1.5px;
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+    transition: background-size 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  .link-static-underline:hover { background-size: 30% 1.5px; }
+
+  /* Ink-stamp mark: a slightly rotated, hand-pressed label. */
+  .stamp-mark {
+    @apply inline-flex items-center gap-1.5 border-[1.5px] border-stamp bg-paper/90 px-2 py-[3px] font-mono text-[0.6rem] font-medium uppercase tracking-[0.1em] text-stamp;
+    transform: rotate(-3deg);
+  }
+
+  /* Halftone screen — used as a fading decorative texture. */
+  .screentone {
+    background-image: radial-gradient(circle, rgb(var(--c-ink) / 0.16) 0.95px, transparent 1.15px);
+    background-size: 7px 7px;
+  }
+
+  /* Print press feel: the button lifts and leaves a stamp-red offset. */
+  .press {
+    transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.35s cubic-bezier(0.22, 1, 0.36, 1), background-color 0.5s, color 0.5s;
+  }
+  @media (hover: hover) and (pointer: fine) {
+    .press:hover:not(:disabled) {
+      transform: translate(-2px, -2px);
+      box-shadow: 3px 3px 0 rgb(var(--c-stamp));
+    }
+  }
+  .press:active:not(:disabled) {
+    transform: translate(0, 0);
+    box-shadow: 0 0 0 rgb(var(--c-stamp));
+  }
+
+  @keyframes pillin { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+
+  .no-scrollbar { scrollbar-width: none; }
+  .no-scrollbar::-webkit-scrollbar { display: none; }
+
+  .reveal-line { display: block; overflow: hidden; padding-bottom: 0.14em; margin-bottom: -0.14em; }
+  .reveal-line > span { display: block; will-change: transform; }
+}

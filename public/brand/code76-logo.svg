@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="5 4 673 119" role="img" aria-label="CODE76">
+  <defs>
+    <linearGradient id="c76-grad" gradientUnits="userSpaceOnUse" x1="6" y1="0" x2="677" y2="0">
+      <stop offset="0" stop-color="#36191B"/>
+      <stop offset="0.26" stop-color="#4A2224"/>
+      <stop offset="0.47" stop-color="#73383C"/>
+      <stop offset="0.64" stop-color="#8F464A"/>
+      <stop offset="0.79" stop-color="#A64C51"/>
+      <stop offset="1" stop-color="#C45A60"/>
+    </linearGradient>
+  </defs>
+  <g fill="none" stroke="url(#c76-grad)" stroke-width="8" stroke-linecap="butt" stroke-linejoin="miter">
+    <path d="M102.0 27.3A53.5 53.5 0 1 0 102.0 101.7"/>
+    <path d="M267 11H314.75A53.25 53.25 0 0 1 314.75 117.5H270.5V64"/>
+    <path d="M401 11H474M401 63.5H474M401 117.5H474"/>
+    <path d="M496 11H576L525 121"/>
+    <path d="M668 21C660 14 652 11.5 640 11.5C616 11.5 601 32 601 60V88.5"/>
+    <ellipse cx="637" cy="88.5" rx="36" ry="29.5"/>
+  </g>
+  <circle cx="179.5" cy="63.5" r="58.5" fill="#4A2224"/>
+  <g fill="#F7F0EE">
+    <circle cx="165" cy="49" r="6"/>
+    <circle cx="194" cy="49" r="6"/>
+    <circle cx="179.5" cy="63.5" r="6"/>
+    <circle cx="165" cy="78" r="6"/>
+    <circle cx="194" cy="78" r="6"/>
+  </g>
+</svg>

@@ -1,0 +1,16 @@
+# Production. Every connection value and allowed origin must be supplied explicitly
+# through environment variables; nothing defaults to a permissive value.
+spring:
+  datasource:
+    hikari:
+      maximum-pool-size: ${DB_POOL_SIZE:10}
+
+app:
+  payments:
+    razorpay:
+      allow-live-keys: true     # production takes real payments
+  session:
+    cookie-secure: true         # session cookie only travels over HTTPS in production
+  cors:
+    # Unset → no CORS mapping at all, so browsers block cross-origin calls (fail closed).
+    allowed-origins: ${CORS_ALLOWED_ORIGINS:}

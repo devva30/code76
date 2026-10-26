@@ -1,0 +1,73 @@
+# Shared configuration. Environment-specific values live in application-<profile>.yml
+# and in environment variables (or server/.env locally) — never in source control.
+spring:
+  application:
+    name: code76-server
+  config:
+    # Local developer secrets (DB password etc.). Optional: absent in CI/production.
+    import: optional:file:.env[.properties]
+  profiles:
+    # `dev` also loads the demo catalogue seeder.
+    group:
+      dev: demo-data
+  datasource:
+    url: ${DB_URL}
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: validate          # Flyway owns the schema; Hibernate only checks it matches.
+    properties:
+      hibernate:
+        default_batch_fetch_size: 50   # load colours/images/variants in batches, avoiding N+1 queries
+        jdbc:
+          time_zone: UTC
+  flyway:
+    locations: classpath:db/migration
+  jackson:
+    default-property-inclusion: always
+  servlet:
+    multipart:
+      max-file-size: 10MB       # matches the media library's limit
+      max-request-size: 11MB
+  session:
+    # Signed-in sessions live in PostgreSQL (tables created by Flyway V3), so restarts don't sign people out.
+    timeout: 7d                 # signed out after 7 days without any visit
+    jdbc:
+      initialize-schema: never  # Flyway owns the schema
+
+server:
+  port: ${PORT:8080}
+  error:
+    include-stacktrace: never
+    include-message: never
+
+app:
+  admin:
+    # Comma-separated emails allowed into the admin panel. Set ADMIN_EMAILS in server/.env.
+    emails: ${ADMIN_EMAILS:}
+  session:
+    # Session cookie is defined in config/SessionCookieConfig (HttpOnly, SameSite=Lax).
+    cookie-secure: ${SESSION_COOKIE_SECURE:false}   # HTTPS-only cookie; forced on in the prod profile
+  settings:
+    # 32 random bytes, base64. Encrypts secrets saved in the admin (Razorpay key secret, webhook secret).
+    # Set SETTINGS_ENCRYPTION_KEY in server/.env; keep it safe, saved secrets can't be read without it.
+    encryption-key: ${SETTINGS_ENCRYPTION_KEY:}
+  payments:
+    razorpay:
+      # Optional fallback: keys saved in Admin → Store settings take priority over these.
+      # Set these in server/.env (never in this file). Use TEST keys (rzp_test_…) for development.
+      # Leave them empty and online payment is simply switched off.
+      key-id: ${RAZORPAY_KEY_ID:}
+      key-secret: ${RAZORPAY_KEY_SECRET:}
+      webhook-secret: ${RAZORPAY_WEBHOOK_SECRET:}
+      base-url: ${RAZORPAY_BASE_URL:https://api.razorpay.com/v1}
+      allow-live-keys: false     # live keys charge real money; only the prod profile allows them
+  cors:
+    # Comma-separated list of exact origins allowed to call /api/**. Empty = no cross-origin access.
+    allowed-origins: ${CORS_ALLOWED_ORIGINS:}
+
+logging:
+  level:
+    org.hibernate.SQL: warn

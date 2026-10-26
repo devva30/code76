@@ -1,0 +1,22 @@
+# Local PostgreSQL for development. Credentials come from server/.env (see .env.example).
+# Mapped to host port 5433 so it never clashes with a locally installed PostgreSQL on 5432.
+services:
+  postgres:
+    image: postgres:17-alpine
+    container_name: code76-postgres
+    environment:
+      POSTGRES_DB: code76
+      POSTGRES_USER: ${DB_USERNAME:-code76}
+      POSTGRES_PASSWORD: ${DB_PASSWORD:?Set DB_PASSWORD in server/.env}
+    ports:
+      - "5433:5432"
+    volumes:
+      - code76-pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $${POSTGRES_USER} -d code76"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+volumes:
+  code76-pgdata:
