@@ -1,0 +1,58 @@
+# CODE76 on one server (AWS Lightsail): the database, the Java server, and Caddy (HTTPS).
+# Secrets live in deploy/.env on the server (created by setup.sh, never committed).
+name: code76
+
+services:
+  db:
+    image: postgres:17
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: code76
+      POSTGRES_USER: code76
+      POSTGRES_PASSWORD: ${DB_PASSWORD:?DB_PASSWORD is missing from deploy/.env}
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U code76 -d code76"]
+      interval: 5s
+      timeout: 5s
+      retries: 30
+    shm_size: 128mb
+    # Not published to the internet: only the app can reach it.
+
+  app:
+    build: ../server
+    restart: unless-stopped
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      DB_URL: jdbc:postgresql://db:5432/code76
+      DB_USERNAME: code76
+      DB_PASSWORD: ${DB_PASSWORD}
+      ADMIN_EMAILS: ${ADMIN_EMAILS:?ADMIN_EMAILS is missing from deploy/.env}
+      CORS_ALLOWED_ORIGINS: ${CORS_ALLOWED_ORIGINS:-}
+      SETTINGS_ENCRYPTION_KEY: ${SETTINGS_ENCRYPTION_KEY:?SETTINGS_ENCRYPTION_KEY is missing from deploy/.env}
+    mem_limit: 1g
+
+  caddy:
+    image: caddy:2
+    restart: unless-stopped
+    depends_on:
+      - app
+    ports:
+      - "80:80"
+      - "443:443"
+      - "443:443/udp"
+    environment:
+      # ":80" until the domain is ready; then e.g. "api.code76.in" and Caddy gets HTTPS by itself.
+      API_ADDRESS: ${API_ADDRESS:-:80}
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy_data:/data
+      - caddy_config:/config
+
+volumes:
+  pgdata:
+  caddy_data:
+  caddy_config:
