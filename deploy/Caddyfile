@@ -1,6 +1,22 @@
-# Caddy sits in front of the Java server. With a domain name as the address it fetches and
-# renews the HTTPS certificate automatically; with ":80" it serves plain HTTP (for first tests).
-{$API_ADDRESS::80} {
+# Caddy is the front door for the whole store: it shows the website and forwards /api and /media
+# to the Java server. With a domain name as the address it fetches and renews the HTTPS
+# certificate automatically; with ":80" it serves plain HTTP (for first tests).
+{$SITE_ADDRESS::80} {
 	encode zstd gzip
-	reverse_proxy app:8080
+
+	@server path /api/* /media/*
+	handle @server {
+		reverse_proxy app:8080
+	}
+
+	handle {
+		root * /srv
+		# Built files have content hashes in their names, so browsers may keep them for a year.
+		header /assets/* Cache-Control "public, max-age=31536000, immutable"
+		header X-Content-Type-Options nosniff
+		header Referrer-Policy strict-origin-when-cross-origin
+		# Every page (/shop, /product/…, /admin…) is handled by the website itself.
+		try_files {path} /index.html
+		file_server
+	}
 }

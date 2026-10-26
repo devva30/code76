@@ -1,4 +1,4 @@
-# CODE76 on one server (AWS Lightsail): the database, the Java server, and Caddy (HTTPS).
+# CODE76 on one server (AWS Lightsail): the database, the Java server, and Caddy (the website + HTTPS).
 # Secrets live in deploy/.env on the server (created by setup.sh, never committed).
 name: code76
 
@@ -35,8 +35,13 @@ services:
       SETTINGS_ENCRYPTION_KEY: ${SETTINGS_ENCRYPTION_KEY:?SETTINGS_ENCRYPTION_KEY is missing from deploy/.env}
     mem_limit: 1g
 
+  # The front door: serves the website and forwards /api and /media to the app.
   caddy:
-    image: caddy:2
+    build:
+      context: ..
+      dockerfile: deploy/web.Dockerfile
+      args:
+        SITE_URL: ${SITE_URL:?SITE_URL is missing from deploy/.env}
     restart: unless-stopped
     depends_on:
       - app
@@ -45,10 +50,9 @@ services:
       - "443:443"
       - "443:443/udp"
     environment:
-      # ":80" until the domain is ready; then e.g. "api.code76.in" and Caddy gets HTTPS by itself.
-      API_ADDRESS: ${API_ADDRESS:-:80}
+      # The store's host name, e.g. "code76.in"; Caddy gets the HTTPS certificate by itself.
+      SITE_ADDRESS: ${SITE_ADDRESS:-:80}
     volumes:
-      - ./Caddyfile:/etc/caddy/Caddyfile:ro
       - caddy_data:/data
       - caddy_config:/config
 

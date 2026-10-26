@@ -54,9 +54,11 @@ if [ ! -f "$ENV_FILE" ]; then
 DB_PASSWORD=$(openssl rand -hex 24)
 SETTINGS_ENCRYPTION_KEY=$(openssl rand -base64 32)
 ADMIN_EMAILS=ogspace2025@gmail.com
-# Set these once the domain is ready (Claude will tell you the exact values):
-API_ADDRESS=:80
-CORS_ALLOWED_ORIGINS=
+# The store's address. Until a domain is bought, a free sslip.io name for this server's IP
+# (it still gets real HTTPS). With a domain: SITE_ADDRESS=code76.in, www.code76.in and SITE_URL=https://code76.in
+SITE_ADDRESS=$(curl -fsS https://checkip.amazonaws.com | tr '.' '-').sslip.io
+SITE_URL=https://$(curl -fsS https://checkip.amazonaws.com | tr '.' '-').sslip.io
+CORS_ALLOWED_ORIGINS=https://$(curl -fsS https://checkip.amazonaws.com | tr '.' '-').sslip.io
 EOF
   chmod 600 "$ENV_FILE"
   ok "Created $ENV_FILE"
@@ -87,8 +89,9 @@ fi
 
 say "7/7 Building and starting your store (the first build takes about 5-10 minutes)"
 docker compose up -d --build
+SITE_URL=$(grep '^SITE_URL=' "$ENV_FILE" | cut -d= -f2-)
 for _ in $(seq 1 90); do
-  if curl -fsS -o /dev/null http://localhost/api/site 2>/dev/null; then break; fi
+  if curl -fsS -o /dev/null "$SITE_URL/api/health" 2>/dev/null; then break; fi
   sleep 5
 done
 
@@ -98,10 +101,9 @@ cat > /etc/cron.d/code76-backup <<EOF
 30 2 * * * root cd $DEPLOY && docker compose exec -T db pg_dump -U code76 -Fc code76 > $BACKUPS/code76-\$(date +\%a).dump 2>/dev/null
 EOF
 
-if curl -fsS -o /dev/null http://localhost/api/site; then
+if curl -fsS -o /dev/null "$SITE_URL/api/health"; then
   ok ""
-  ok "DONE! Your store's server is running."
-  ok "Test it in your browser: http://$(curl -fsS https://checkip.amazonaws.com 2>/dev/null || echo YOUR-STATIC-IP)/api/health"
+  ok "DONE! Your store is live at: $SITE_URL"
 else
   echo ""
   echo "The server is still starting or something went wrong. Show Claude the output of:"
